@@ -16,7 +16,8 @@ export class HitCounter extends Construct {
 
   constructor(scope: Construct, id: string, props: HitCounterProps) {
     super(scope, id);
-
+    
+    //"this" means a instance of HitCounter
     this.table = new Table(this, "Hits", {
       partitionKey: { name: "path", type: AttributeType.STRING },
     });
